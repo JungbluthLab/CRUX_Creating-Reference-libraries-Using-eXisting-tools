@@ -189,7 +189,7 @@ echo ""
 ###
 mkdir -p ${ODIR}/${NAME}_ecoPCR
 mkdir -p ${ODIR}/${NAME}_ecoPCR/raw_out/
-#run ecoPCR on each folder in the obitools database folder
+#run ecoPCR on each folder in the obitools database folder - update: Sean J, not sure I'd phrase as "on each folder" since there can be 0 folders indicate the obitools database folder
 echo "OBI_DB is: ${OBI_DB}" #/mnt/crux_db/Obitools_databases"
 ls /mnt/crux_db/Obitools_databases/OB_dat_* | sed 's/..dx$//'
 #for db in /mnt/crux_db/Obitools_databases/OB_dat_*; do

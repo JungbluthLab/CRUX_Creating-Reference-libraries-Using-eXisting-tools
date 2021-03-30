@@ -26,7 +26,7 @@ ecoPCR="/ecopcr/src/ecoPCR"							#path to executable. see documentation for how
 
 #Load / run BLASTn
 LOAD_BLAST="" 												#if none, leave empty <- for HPC
-BLASTn_CMD="/usr/local/anacapa/miniconda/bin/blastn" 			#either the path to the blastn executable or just blastn if it is loaded or already in your path
+BLASTn_CMD="/ncbi-blast-2.11.0+/bin/blastn" 			#either the path to the blastn executable or just blastn if it is loaded or already in your path
 
 
 #Load / run Qiime
