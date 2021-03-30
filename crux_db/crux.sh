@@ -191,9 +191,8 @@ mkdir -p ${ODIR}/${NAME}_ecoPCR
 mkdir -p ${ODIR}/${NAME}_ecoPCR/raw_out/
 #run ecoPCR on each folder in the obitools database folder
 echo "OBI_DB is: ${OBI_DB}" #/mnt/crux_db/Obitools_databases"
-for db in /mnt/crux_db/Obitools_databases/OB_dat_*
-echo "db is: ${db}"
-do
+for db in /mnt/crux_db/Obitools_databases/OB_dat_*; do
+ echo "db is: ${db}"
  db1=${db%/} # not working
  #j=${db1#${OBI_DB}/}
  j=$(echo ${db1#${OBI_DB}/} | sed 's/..dx$//')
