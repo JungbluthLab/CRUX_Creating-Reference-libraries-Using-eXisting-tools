@@ -163,10 +163,10 @@ fi
 source $DB/scripts/crux_vars.sh
 source $DB/scripts/crux_config.sh
 
-${MODULE_SOURCE}
-${QIIME}
-${BOWTIE2}
-${ATS} #load ATS, Hoffman2 specific module for managing submitted jobs.
+#${MODULE_SOURCE}
+#${QIIME}
+#${BOWTIE2}
+#${ATS} #load ATS, Hoffman2 specific module for managing submitted jobs.
 
 
 echo " "
@@ -190,8 +190,8 @@ echo ""
 mkdir -p ${ODIR}/${NAME}_ecoPCR
 mkdir -p ${ODIR}/${NAME}_ecoPCR/raw_out/
 #run ecoPCR on each folder in the obitools database folder
-echo "OBI_DB is: ${OBI_DB}"
-for db in ${OBI_DB}/OB_dat_*/
+echo "OBI_DB is: ${OBI_DB}" #/mnt/crux_db/Obitools_databases"
+for db in /mnt/crux_db/Obitools_databases/OB_dat_*
 do
  db1=${db%/}
  j=${db1#${OBI_DB}/}
