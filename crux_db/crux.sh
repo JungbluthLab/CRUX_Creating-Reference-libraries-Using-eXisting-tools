@@ -198,7 +198,7 @@ do
  j=$(echo ${db1#${OBI_DB}/} | sed 's/..dx$//')
  echo "..."${j}" ecoPCR is running"
  #${ecoPCR} -d ${db}${j} -e ${ERROR:=$ECOPCR_e} -l ${SHRT} -L ${LNG} ${FP} ${RP} -D 1 > ${ODIR}/${NAME}_ecoPCR/raw_out/${NAME}_${j}_ecoPCR_out
- ${ecoPCR} -d ${db} -e ${ERROR:=$ECOPCR_e} -l ${SHRT} -L ${LNG} ${FP} ${RP} -D 1 > ${ODIR}/${NAME}_ecoPCR/raw_out/${NAME}_${j}_ecoPCR_out
+ ${ecoPCR} -d ${OBI_DB}/${j} -e ${ERROR:=$ECOPCR_e} -l ${SHRT} -L ${LNG} ${FP} ${RP} -D 1 > ${ODIR}/${NAME}_ecoPCR/raw_out/${NAME}_${j}_ecoPCR_out
  echo "..."${j}" ecoPCR is finished"
  echo ""
 date
