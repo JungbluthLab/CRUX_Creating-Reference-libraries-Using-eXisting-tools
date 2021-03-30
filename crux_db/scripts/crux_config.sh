@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Config file for CRUX_release_V1		09-01-2017
 # Written by Emily Curd (eecurd@g.ucla.edu) and Gaurav Kandlikar (gkandlikar@ucla.edu)
 # Developed at UCLA for the University of California Conservation Consortium's CALeDNA Program
@@ -33,10 +35,10 @@ QIIME=""
 
 #load bowtie2
 #BOWTIE2="module load bowtie2"							#or what ever code is used to load bowtie2 in a bash shell, or path to bowtie2
-BOWTIE2=""
+BOWTIE2="/usr/local/anacapa/miniconda/bin/bowtie2"
 
 #load ATS
-ATS="module load ATS"									#or what ever code is used to load ATS in a bash shell, or path to ATS.  ATS is a Hoffman2 module that allows the user to submit a job on the HPC from within a shell script
+#ATS="module load ATS"									#or what ever code is used to load ATS in a bash shell, or path to ATS.  ATS is a Hoffman2 module that allows the user to submit a job on the HPC from within a shell script
 ATS=""
 
 ###########################
@@ -50,7 +52,7 @@ OBI_DB="/mnt/crux_db/Obitools_databases" 							#see documentation for how to bu
 TAXO="/mnt/crux_db/TAXO" 											#see documentation for how to obtain this directory
 
 #NCBI key for accession number to taxonomy assignment
-A2T="/mnt/crux_dbaccession2taxonomy/nucl_gb.accession2taxid" 		#see documentation for how to obtain this file
+A2T="/mnt/crux_db/accession2taxonomy/nucl_gb.accession2taxid" 		#see documentation for how to obtain this file
 
 #BLAST db folder.  Should contain many files like the following: nt.00.nhr, nt.00.nin, nt.00.nnd, nt.00.nni, nt.00.nsq, nt.01.nhr, nt.01.nin, nt.01.nnd, nt.01.nni, nt.01.nsq, nt.01.nhr, nt.02.nin,......,......,nt.nal
 BLAST_DB="/mnt/crux_db/NCBI_blast_nt/nt"							#see documentation for how to obtain this director

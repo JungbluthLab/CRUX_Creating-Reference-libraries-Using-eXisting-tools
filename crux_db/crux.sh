@@ -190,6 +190,7 @@ echo ""
 mkdir -p ${ODIR}/${NAME}_ecoPCR
 mkdir -p ${ODIR}/${NAME}_ecoPCR/raw_out/
 #run ecoPCR on each folder in the obitools database folder
+echo "OBI_DB is: ${OBI_DB}"
 for db in ${OBI_DB}/OB_dat_*/
 do
  db1=${db%/}

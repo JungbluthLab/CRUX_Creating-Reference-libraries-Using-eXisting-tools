@@ -45,4 +45,4 @@ gunzip *.gz
 # rinse and repeat for the other databases
 
 # ~3hrs
-time obiconvert -t ../TAXO --embl --ecopcrdb-output=./OB_dat_EMBL_std_fun ./EMBL_pro/*.dat --skip-on-error
+#time obiconvert -t ../TAXO --embl --ecopcrdb-output=./OB_dat_EMBL_std_fun ./EMBL_pro/*.dat --skip-on-error
