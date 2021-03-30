@@ -223,6 +223,8 @@ mkdir -p ${ODIR}/${NAME}_ecoPCR/cleaned
 printf ">${NAME}_F\n${FP}\n>${NAME}_R\n${RP}" > "${ODIR}/cutadapt_files/${NAME}.fasta"
 python ${DB}/scripts/crux_format_primers_cutadapt.py ${ODIR}/cutadapt_files/${NAME}.fasta ${ODIR}/cutadapt_files/g_${NAME}.fasta ${ODIR}/cutadapt_files/a_${NAME}.fasta
 #run ecoPCR through cutadapt to verify that the primer seqeunce exists, and to trim it off
+#ODIR="/CRUX_Creating-Reference-libraries-Using-eXisting-tools/crux_db/CO1_crux_output"
+# NAME="CO1"
 for str in ${ODIR}/${NAME}_ecoPCR/raw_out/*_ecoPCR_out
 do
  str1=${str%_ecoPCR_out}
