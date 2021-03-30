@@ -9,7 +9,7 @@
 #############################
 
 # load modules
-MODULE_SOURCE="source /u/local/Modules/default/init/bash" 	#if none, leave empty <- for HPC
+MODULE_SOURCE="" 	#if none, leave empty <- for HPC
 
 #load cutadapt
 CUTADAPT="/u/local/apps/python/2.7.13/bin/cutadapt" 		#path to cutadapt binary. see documentation for how to obtain this script

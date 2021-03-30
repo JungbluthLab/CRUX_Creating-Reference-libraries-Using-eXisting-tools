@@ -1,4 +1,4 @@
-#!/user/bin/env/ python
+#!/usr/bin/env python
 
 # Written by Emily Curd (eecurd@g.ucla.edu), with help from https://www.biostars.org/p/14614/
 # for the University of California Conservation Consortium's CALeDNA Program
@@ -18,15 +18,15 @@ def rComp(read):
         rc += nuc_dict[read[i]]
 
     return rc
-    
+
 ### make regular primers with ^seq -> g
 outfile1 = open(sys.argv[2], "w+") # forwards with ^seq
 header = ''
 seq = ''
 for line in infile:
     if line[0] == ">":
-    	header = line.strip() 
-        outfile1.write(header + "\n")  
+    	header = line.strip()
+        outfile1.write(header + "\n")
     else:
     	seq = line.strip()
     	outfile1.write("^" + seq + "\n")
@@ -40,11 +40,9 @@ header = ''
 seq = ''
 for line in infile:
     if line[0] == ">":
-    	header = line.strip() 
-        outfile2.write(header + "_rc" + "\n")  
+    	header = line.strip()
+        outfile2.write(header + "_rc" + "\n")
     else:
     	seq = line.strip()
     	outfile2.write(rComp(seq)+ "$" + "\n")
 outfile2.close()
-
- 
