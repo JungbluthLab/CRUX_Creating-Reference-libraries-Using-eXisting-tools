@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 ### this script is run as follows
 # sh ~/sub_blast.sh -n ${NAME} -q ${st} -o ${ODIR} -k ${j} -l ${l} -d ${DB} -t <The number of threads to launch for the first round of BLAST>  -v <The minimum accepted value for BLAST hits in the first round of BLAST >  -i <The minimum percent ID for BLAST hits in the first round of BLAST>  -c <Minimum percent of length of a query that a BLAST hit must cover >  -a <Maximum number of

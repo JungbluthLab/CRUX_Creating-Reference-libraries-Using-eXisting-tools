@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+
 from die import *
 import subprocess
 import tempfile

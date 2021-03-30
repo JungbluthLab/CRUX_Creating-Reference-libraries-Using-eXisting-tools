@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # Written by Emily Curd (eecurd@g.ucla.edu)
 # for the University of California Conservation Consortium's CALeDNA Program
 
@@ -23,5 +25,3 @@ for line in infile:
     outfile.write(id + "\t" + tax + "\n")
 
 outfile.close()
-
-

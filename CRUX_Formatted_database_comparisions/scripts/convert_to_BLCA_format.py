@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 
 import sys
 import fasta
@@ -47,11 +47,10 @@ def OnSeq(Label, Seq):
 	Tax = AppendRank(Tax, TaxStr, 'p')
 	Tax = AppendRank(Tax, TaxStr, k)
 
-	Acc = Acc.upper()	
+	Acc = Acc.upper()
 	NewLabel = "REF_" + Acc
 	fasta.WriteSeq(fFa, Seq, NewLabel)
 
 	print >> fTax, "%s\t%s" % (NewLabel, Tax)
 
 fasta.ReadSeqsOnSeq(InputFileName, OnSeq)
-

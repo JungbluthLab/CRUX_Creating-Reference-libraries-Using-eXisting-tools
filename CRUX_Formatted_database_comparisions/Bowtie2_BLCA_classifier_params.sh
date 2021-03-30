@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # if you want to test of parameters for
   # minimum percent identity between query and subject
   # and

@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 
 import sys
 import fasta
@@ -47,7 +47,7 @@ def OnSeq(Label, Seq):
 		OutLine += Char + "__" + Name
 		if i+1 < N:
 			OutLine += "; "
-			
+
 	print >> fTax, OutLine
 
 	if KeepTaxAnnot:

@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 # example script to download and data for crux
 # make a crux_db directory

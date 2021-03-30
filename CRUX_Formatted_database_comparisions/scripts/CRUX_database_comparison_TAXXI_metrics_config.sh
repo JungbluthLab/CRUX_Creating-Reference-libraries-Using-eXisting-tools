@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 #############################
 # Paths to programs / load programs
 #############################

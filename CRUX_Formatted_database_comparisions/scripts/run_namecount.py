@@ -1,20 +1,20 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 
 # script take a taxonomy file and counts the occurrences of taxonomic rank
 # usage e.g.:
 # python2 ~/taxxi/py/run_namecount.py ~/Downloads/test.txt ~/taxxi/blca_recreate/namecounts test
 
 import re
-import string 
+import string
 import sys
 import os
 
 
-file_to_namecount= sys.argv[1] 
+file_to_namecount= sys.argv[1]
 outdir = sys.argv[2]
 name = sys.argv[3]
 
-tempfile = outdir + "/temp.txt" 
+tempfile = outdir + "/temp.txt"
 
 
 file=file_to_namecount
@@ -42,21 +42,21 @@ text_string = document_text.read()
 match_pattern = re.findall('[a-z]?:?[A-Z]?[^\s]+', text_string)
 
 
- 
+
 for word in match_pattern:
     count = frequency.get(word,0)
     frequency[word] = count + 1
-    
-    
-     
+
+
+
 frequency_list = frequency.keys()
 
- 
- 
+
+
 for words in frequency_list:
     print >> f, frequency[words],'\t', words
-    
-    
+
+
 document_text.close()
 f.close()
 

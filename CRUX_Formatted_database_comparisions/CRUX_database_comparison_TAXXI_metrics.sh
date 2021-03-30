@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 #  bash /CRUX_database_comparison_TAXXI_metrics.sh  -m ~/CRUX_database_comparison_TAXXI_metrics -n MitoFish_vs_12S -a ~/MitoFish_.fasta -b ~/MitoFish_taxonomy.txt -c ~/12S_.fasta -d ~/12S_taxonomy.txt
 maindir=""
 name=""  #e.g. 12S_vs_MitoFish

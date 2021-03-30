@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Variables file for CRUX_release_V1		09-01-2017
 # Written by Emily Curd (eecurd@g.ucla.edu) and Gaurav Kandlikar (gkandlikar@ucla.edu)
 # Developed at UCLA for the University of California Conservation Consortium's CALeDNA Program

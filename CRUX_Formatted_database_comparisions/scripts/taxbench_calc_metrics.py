@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 
 import sys
 import sortdict
@@ -69,7 +69,7 @@ def DoPredFile(FileName, NameToCountA, NameToCountB):
 		Line = f.readline()
 		if len(Line) == 0:
 			return Known, Novel, TP, TN, FN, OC, MC, NC
-		
+
 		Fields = Line[:-1].split('\t')
 		assert len(Fields) == 2
 
@@ -221,7 +221,7 @@ if 0:
 		s += "\t."
 		s += "\t."
 
-	if Novel >= MIN:	
+	if Novel >= MIN:
 		s += "\t%.1f" % TNR
 		s += "\t%.1f" % OCR
 	else:

@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+
 # Adapted from https://github.com/qunfengdong/BLCA/ by Jesse Gomer
 # for the University of California Conservation Consortium's CALeDNA Program
 

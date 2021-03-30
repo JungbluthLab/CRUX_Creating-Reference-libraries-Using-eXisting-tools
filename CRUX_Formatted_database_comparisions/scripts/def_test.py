@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 
 FileName_NameCounts='/Users/limeybean/Downloads/test.txt'
 
@@ -15,6 +15,6 @@ def ReadNameCounts(FileName):
 		Name = Fields[1]
 		assert Name[1] == ':'
 		Rank = Name[0]
-		NameToCount[Name] = Count		
+		NameToCount[Name] = Count
 
 NameToCount = ReadNameCounts(FileName_NameCounts)

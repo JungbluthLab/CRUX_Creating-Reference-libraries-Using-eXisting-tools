@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 
 import sys
 import sortdict
@@ -45,7 +45,7 @@ def ReadNameCounts(FileName):
 		Name = Fields[1]
 		assert Name[1] == ':'
 		Rank = Name[0]
-		NameToCount[Name] = Count		
+		NameToCount[Name] = Count
 
 
 NameToCount = ReadNameCounts(FileName_NameCounts)
@@ -72,7 +72,7 @@ def DoPredFile(FileName, NameToCount):
 		Line = f.readline()
 		if len(Line) == 0:
 			return Known, Novel, TP, TN, FN, OC, MC, NC
-		
+
 		Fields = Line[:-1].split('\t')
 		assert len(Fields) == 2
 

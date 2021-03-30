@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 ### this script is run as follows
 # sh ~CRUX/crux_db/crux.sh  -n <Metabarcode locus primer set name>  -f <Metabarcode locus forward primer sequence>  -r <Metabarcode locus reverse primer sequence>  -s <Shortest amplicon expected>  -m <Longest amplicon expected>  -o <path to output directory>  -d <path to crux_db>  -x <If retaining intermediate files no argument needed>  -u <If running on an HPC this is your username: e.g. eecurd>  -l <If running locally no argument needed>  -k <Chunk size for breaking up blast seeds (default

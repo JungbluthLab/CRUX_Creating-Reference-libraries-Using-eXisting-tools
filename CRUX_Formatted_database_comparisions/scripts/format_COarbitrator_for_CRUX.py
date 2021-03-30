@@ -1,8 +1,9 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
+
 import sys
 import re
 
-file= sys.argv[1] 
+file= sys.argv[1]
 outfile1 = sys.argv[2]
 #outfile2 = sys.argv[3]
 
@@ -17,5 +18,3 @@ with open(file, "r") as my_file:
 
 
 f1.close()
-
-

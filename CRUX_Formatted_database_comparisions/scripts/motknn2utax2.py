@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 
 import sys
 import utax2
@@ -30,5 +30,5 @@ while 1:
 		if PredStr != "":
 			PredStr += ","
 		PredStr += Field
-		
+
 	print QueryLabel + '\t' + PredStr

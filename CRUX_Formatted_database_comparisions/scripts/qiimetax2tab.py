@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 
 import sys
 import die
@@ -40,7 +40,7 @@ while 1:
 	if Fields2[0] == "No blast hit":
 		print Label + "\t*"
 		continue
-	
+
 	Tax = ""
 	for Field in Fields2:
 		if Field[1:3] != "__":

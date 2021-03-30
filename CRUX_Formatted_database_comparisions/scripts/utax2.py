@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+
 import sys
 import die
 import sortdict
@@ -25,7 +27,7 @@ def SplitLevelIsTrue(SplitLevelChar, TestLevelChar):
 
 def SplitLevelToTrueLevels(SplitLevel):
 	if SplitLevel == "ref":
-		return LevelChars	
+		return LevelChars
 	s = ""
 	for TestLevel in utax2.LevelChars:
 		if utax2.SplitLevelIsTrue(SplitLevel, TestLevel):
@@ -34,7 +36,7 @@ def SplitLevelToTrueLevels(SplitLevel):
 
 def SplitLevelToFalseLevels(SplitLevel):
 	if SplitLevel == "ref":
-		return ""	
+		return ""
 	s = ""
 	for TestLevel in utax2.LevelChars:
 		if not utax2.SplitLevelIsTrue(SplitLevel, TestLevel):
