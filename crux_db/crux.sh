@@ -196,6 +196,8 @@ do
  db1=${db%/}
  j=${db1#${OBI_DB}/}
  echo "..."${j}" ecoPCR is running"
+ echo "command is:"
+ echo "${ecoPCR} -d ${db}${j} -e ${ERROR:=$ECOPCR_e} -l ${SHRT} -L ${LNG} ${FP} ${RP} -D 1 > ${ODIR}/${NAME}_ecoPCR/raw_out/${NAME}_${j}_ecoPCR_out"
  ${ecoPCR} -d ${db}${j} -e ${ERROR:=$ECOPCR_e} -l ${SHRT} -L ${LNG} ${FP} ${RP} -D 1 > ${ODIR}/${NAME}_ecoPCR/raw_out/${NAME}_${j}_ecoPCR_out
  echo "..."${j}" ecoPCR is finished"
  echo ""
