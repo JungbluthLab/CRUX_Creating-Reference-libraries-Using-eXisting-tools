@@ -193,8 +193,9 @@ mkdir -p ${ODIR}/${NAME}_ecoPCR/raw_out/
 echo "OBI_DB is: ${OBI_DB}" #/mnt/crux_db/Obitools_databases"
 for db in /mnt/crux_db/Obitools_databases/OB_dat_*
 do
- db1=${db%/}
- j=${db1#${OBI_DB}/}
+ db1=${db%/} # not working
+ #j=${db1#${OBI_DB}/}
+ j=$(echo ${db1#${OBI_DB}/} | sed 's/..dx$//')
  echo "..."${j}" ecoPCR is running"
  #${ecoPCR} -d ${db}${j} -e ${ERROR:=$ECOPCR_e} -l ${SHRT} -L ${LNG} ${FP} ${RP} -D 1 > ${ODIR}/${NAME}_ecoPCR/raw_out/${NAME}_${j}_ecoPCR_out
  ${ecoPCR} -d ${db} -e ${ERROR:=$ECOPCR_e} -l ${SHRT} -L ${LNG} ${FP} ${RP} -D 1 > ${ODIR}/${NAME}_ecoPCR/raw_out/${NAME}_${j}_ecoPCR_out
