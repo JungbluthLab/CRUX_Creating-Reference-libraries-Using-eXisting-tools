@@ -30,19 +30,24 @@ time for file in *.tar.gz; do tar -zxvf $file; done
 cd ..
 
 # make an Obitools_databases directory and download and unpack the database files of interest
-# note this is only an example of the fungal db download.
-# rinse and repeat for the other databases
 
 mkdir Obitools_databases
 cd Obitools_databases
-mkdir EMBL_fun
-cd EMBL_fun
-wget ftp://ftp.ebi.ac.uk/pub/databases/embl/release/std/rel_std_fun*
-gunzip *.gz
+input_list="fun inv pln pro vrt"
+for line in $(echo $input_list | tr " " "\n"); do
+  mkdir EMBL_${line}
+  cd EMBL_${line}
+  wget ftp://ftp.ebi.ac.uk/pub/databases/embl/release/std/rel_std_${line}*
+  gunzip *.gz
+  cd ../
+done
 
 # Build the Obitools_databases
-# note this is only an example of the fungal OBITools db conversion.
-# rinse and repeat for the other databases
 
 # ~3hrs
+input_list="fun inv pln pro vrt"
+for line in $(echo $input_list | tr " " "\n"); do
+  obiconvert -t /mnt/crux_db/TAXO --embl --ecopcrdb-output=/mnt/crux_db/Obitools_databases/OB_dat_EMBL_${line}_$(date +"%b_%d_%y") /mnt/crux_db/Obitools_databases/EMBL_${line}/* --skip-on-error
+done
+
 #time obiconvert -t ../TAXO --embl --ecopcrdb-output=./OB_dat_EMBL_std_fun ./EMBL_pro/*.dat --skip-on-error

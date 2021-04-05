@@ -193,7 +193,8 @@ mkdir -p ${ODIR}/${NAME}_ecoPCR/raw_out/
 echo "OBI_DB is: ${OBI_DB}" #/mnt/crux_db/Obitools_databases"
 ls /mnt/crux_db/Obitools_databases/OB_dat_* | sed 's/..dx$//'
 #for db in /mnt/crux_db/Obitools_databases/OB_dat_*; do
-for db in $(ls ${OBI_DB}/OB_dat_* | sed 's/..dx$//' | sed 's/_0[0123456789]*$//' | sort | uniq | sed 's/^.*\///'); do
+for db in $(ls ${OBI_DB}/OB_dat_* | grep Apr | sed 's/.tdx//'); do
+#for db in $(ls ${OBI_DB}/OB_dat_* | sed 's/..dx$//' | sed 's/_0[0123456789]*$//' | sort | uniq | sed 's/^.*\///'); do
  echo "db is: ${db}"
  #j=${db1#${OBI_DB}/}
  echo "..."${db}" ecoPCR is running"
@@ -386,7 +387,7 @@ do
   python ${DB}/scripts/combine_and_dereplicate_fasta.py -o ${ODIR}/${NAME}_db_unfiltered/${NAME}_fasta_and_taxonomy/${NAME}_${j}_blast_out.fasta -a ${str}/fasta/*_out.fasta
 done
 
-# for all of of derepliated blast hits, combine and depreplicate by length
+# for all of of dereplicated blast hits, combine and depreplicate by length
 python ${DB}/scripts/combine_and_dereplicate_fasta.py -o ${ODIR}/${NAME}_db_unfiltered/${NAME}_fasta_and_taxonomy/${NAME}_.fasta -a ${ODIR}/${NAME}_db_unfiltered/${NAME}_fasta_and_taxonomy/*_blast_out.fasta
 rm ${ODIR}/${NAME}_db_unfiltered/${NAME}_fasta_and_taxonomy/*_blast_out.fasta
 
