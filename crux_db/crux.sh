@@ -193,7 +193,7 @@ mkdir -p ${ODIR}/${NAME}_ecoPCR/raw_out/
 echo "OBI_DB is: ${OBI_DB}" #/mnt/crux_db/Obitools_databases"
 ls /mnt/crux_db/Obitools_databases/OB_dat_* | sed 's/..dx$//'
 #for db in /mnt/crux_db/Obitools_databases/OB_dat_*; do
-for db in $(ls ${OBI_DB}/OB_dat_* | grep Apr | sed 's/.tdx//'); do
+for db in $(ls ${OBI_DB}/OB_dat_* | grep Apr | sed 's/.tdx//' | sed 's/^.*\///'); do
 #for db in $(ls ${OBI_DB}/OB_dat_* | sed 's/..dx$//' | sed 's/_0[0123456789]*$//' | sort | uniq | sed 's/^.*\///'); do
  echo "db is: ${db}"
  #j=${db1#${OBI_DB}/}
