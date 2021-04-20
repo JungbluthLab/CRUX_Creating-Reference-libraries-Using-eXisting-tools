@@ -22,7 +22,7 @@ CUTADAPT="/usr/local/anacapa/miniconda/bin/cutadapt" 		#path to cutadapt binary.
 ENTREZ_QIIME="${DB}/scripts/entrez_qiime.py" 						#path to python script. see documentation for how to obtain this script
 
 #ecoPCR
-ecoPCR="/ecopcr/src/ecoPCR"							#path to executable. see documentation for how to obtain this program,
+ecoPCR="/usr/local/anacapa/miniconda/bin/ecoPCR"							#path to executable. see documentation for how to obtain this program,
 
 #Load / run BLASTn
 LOAD_BLAST="" 												#if none, leave empty <- for HPC
